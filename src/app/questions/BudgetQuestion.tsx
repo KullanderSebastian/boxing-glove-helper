@@ -20,7 +20,7 @@ const BudgetQuestion: React.FC<BudgetQuestionProps> = ({ onNext, onPrev, onAnswe
         {'$50 - $100': [50, 100]}, 
         {'$100 - $150': [100, 150]}, 
         {'$150 - $200': [150, 200]}, 
-        {'$200+': [200, 1000]}
+        {'$200+': [200, Infinity]}
     ]
 
     const handleButtonClick = (rangeString: string, rangeArray: number[]) => {
@@ -31,7 +31,7 @@ const BudgetQuestion: React.FC<BudgetQuestionProps> = ({ onNext, onPrev, onAnswe
     return (
         <div className="flex flex-col justify-center h-screen">
             <div className="w-100 max-w-2xl mx-auto text-center">
-                <h2>What's your budget range?</h2>
+                <h2>What&apos;s your budget range?</h2>
                 <BudgetRecommendation experienceLevel={experienceLevel} sessionsPerWeek={sessionsPerWeek} />
                 <div className="mb-4">
                     {budgetRanges.map((range, index) => {

@@ -13,7 +13,7 @@ import WeightQuestion from "../questions/WeightQuestion";
 import WristSupportQuestion from "../questions/WristSupportQuestion";
 import Summary from "./Summary";
 
-export default function home() {
+export default function Home() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [direction, setDirection] = useState<"next" | "prev">("next");
 

@@ -59,7 +59,7 @@ const HeightQuestion: React.FC<HeightQuestionProps> = ({ onNext, onPrev, onAnswe
     return (
         <div className="flex flex-col justify-center h-screen">
             <div className="w-50 max-w-2xl mx-auto text-center">
-                <h2 className="text-2xl mb-4">What's your height?</h2>
+                <h2 className="text-2xl mb-4">What&apos;s your height?</h2>
                 <p>We ask this to help determine the best glove size for you.</p>
                 <div className="flex flex-col items-center space-y-4">
                     <div className="w-full flex flex-col items-start">

@@ -2,6 +2,7 @@
 
 import React, { useState, ChangeEvent } from 'react';
 import NavigationButtons from '../components/NavigationButtons';
+import Image from 'next/image';
 
 interface WristSupportQuestionProps {
     onNext: () => void;
@@ -22,7 +23,7 @@ const WristSupportQuestion: React.FC<WristSupportQuestionProps> = ({ onNext, onP
         <div className="flex flex-col justify-center h-screen">
             <div className="w-100 max-w-2xl mx-auto text-center">
                 <h1>What type of wrist support do you prefer?</h1>
-                <p>When choosing wrist support for your boxing gloves, you have two primary options: lace-up and straps. While both types provide excellent support, we recommend selecting gloves with straps, especially if you're training solo.</p>
+                <p>When choosing wrist support for your boxing gloves, you have two primary options: lace-up and straps. While both types provide excellent support, we recommend selecting gloves with straps, especially if you&apos;re training solo.</p>
                 <h4>Straps:</h4>
                 <ul>
                     <li><p><span className="text-white font-bold">Ease of Use:</span> Straps are significantly easier to put on and take off, making them ideal for solo training sessions.</p></li>
@@ -40,11 +41,11 @@ const WristSupportQuestion: React.FC<WristSupportQuestionProps> = ({ onNext, onP
                     
                 <div className="flex flex-row place-content-around">
                     <div>
-                        <img onClick={handleClick} className={`glowing-svg w-52 h-52 cursor-pointer ${wristSupport === "lace" ? "glowing-selected" : ""}`} src="./../../images/laceupgloves.svg" alt="Boxing gloves with lace up" data-value="lace" />
+                        <Image onClick={handleClick} className={`glowing-svg w-52 h-52 cursor-pointer ${wristSupport === "lace" ? "glowing-selected" : ""}`} src="./../../images/laceupgloves.svg" alt="Boxing gloves with lace up" data-value="lace" />
                         <p className="mt-2 text-white font-bold">Lace-Up</p>
                     </div>
                     <div>
-                        <img onClick={handleClick} className={`glowing-svg w-52 h-52 cursor-pointer ${wristSupport === "strap" ? "glowing-selected" : ""}`} src="./../../images/strapgloves.svg" alt="Boxing gloves with strap" data-value="strap" />
+                        <Image onClick={handleClick} className={`glowing-svg w-52 h-52 cursor-pointer ${wristSupport === "strap" ? "glowing-selected" : ""}`} src="./../../images/strapgloves.svg" alt="Boxing gloves with strap" data-value="strap" />
                         <p className="mt-2 text-white font-bold">Strap</p>
                     </div>
                 </div>

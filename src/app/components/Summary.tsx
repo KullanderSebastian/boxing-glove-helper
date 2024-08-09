@@ -69,7 +69,7 @@ const Summary: React.FC<SummaryProps> = ({ answers }) => {
         };
 
         fetchGloves();
-    }, []);
+    }, [answers.budget, answers.experience, answers.height, answers.purpose, answers.weight, answers.wristSupport]);
 
     if (loading) {
         return <div>Loading...</div>;

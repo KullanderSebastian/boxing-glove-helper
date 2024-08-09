@@ -19,7 +19,7 @@ const ExperienceQuestion: React.FC<ExperienceQuestionProps> = ({ onNext, onAnswe
     return (
         <div className="flex flex-col justify-center h-screen">
             <div className="w-2/4 w-full max-w-2xl mx-auto text-center">
-                <h1>What's your experience level?</h1>
+                <h1>What&apos;s your experience level?</h1>
                 <input 
                     type="range"
                     min="0"
