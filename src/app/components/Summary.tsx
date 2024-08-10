@@ -4,7 +4,7 @@ import GloveCarousel from "./GloveCarousel";
 
 interface SummaryProps {
     answers: {
-        experience: string;
+        experience: number;
         frequency: string;
         height: string;
         weight: string;

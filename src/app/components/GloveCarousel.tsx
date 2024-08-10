@@ -1,6 +1,4 @@
 import react, { useState } from "react";
-import NavigationButtons from "./NavigationButtons";
-import Image from 'next/image';
 
 interface Glove {
     _id: string;
@@ -39,7 +37,7 @@ const GloveCarousel: React.FC<GloveCarouselProps> = ({ gloves, recommendedSize }
                 <div>
                     <div className="flex mt-8">
                         <div className="w-1/2">
-                            <Image className="w-full m-auto rounded-lg" src={gloves[currentIndex].image_url} alt={gloves[currentIndex].title} width="100" />
+                            <img className="w-full m-auto rounded-lg" src={gloves[currentIndex].image_url} alt={gloves[currentIndex].title} width="100" />
                         </div>
                         <div className="flex flex-col w-1/2 text-left ml-8 justify-evenly">
                             <p className="text-white">{gloves[currentIndex].title}</p>

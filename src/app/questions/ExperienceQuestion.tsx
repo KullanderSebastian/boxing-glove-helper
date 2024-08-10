@@ -1,19 +1,19 @@
 "use client";
 
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useState, useEffect } from 'react';
 
 interface ExperienceQuestionProps {
     onNext: () => void;
-    onAnswerChange: (questionKey: string, value: string) => void;
+    onAnswerChange: (questionKey: string, value: number) => void;
 };
 
 const ExperienceQuestion: React.FC<ExperienceQuestionProps> = ({ onNext, onAnswerChange }) => {
     const [experience, setExperience] = useState(0);
 
     const handleSliderChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const value = e.currentTarget.value || "";
+        const value = e.currentTarget.value || 0;
         setExperience(Number(value));
-        onAnswerChange("experience", value);
+        onAnswerChange("experience", Number(value));
     };
 
     return (

@@ -20,7 +20,7 @@ const BudgetQuestion: React.FC<BudgetQuestionProps> = ({ onNext, onPrev, onAnswe
         {'$50 - $100': [50, 100]}, 
         {'$100 - $150': [100, 150]}, 
         {'$150 - $200': [150, 200]}, 
-        {'$200+': [200, Infinity]}
+        {'$200+': [200, 1000]}
     ]
 
     const handleButtonClick = (rangeString: string, rangeArray: number[]) => {

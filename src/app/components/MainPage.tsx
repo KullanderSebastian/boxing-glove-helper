@@ -18,7 +18,7 @@ export default function Home() {
     const [direction, setDirection] = useState<"next" | "prev">("next");
 
     const [answers, setAnswers] = useState({
-        experience: "",
+        experience: 0,
         frequency: "",
         height: "",
         weight: "",
@@ -38,7 +38,7 @@ export default function Home() {
         setCurrentQuestion((prev) => (prev > 0 ? prev - 1 : prev));
     };
 
-    const handleAnswerChange = (questionKey: string, value: string | string[] | number[]) => {
+    const handleAnswerChange = (questionKey: string, value: string | number | string[] | number[]) => {
         setAnswers((prev) => ({
             ...prev,
             [questionKey]: value,
